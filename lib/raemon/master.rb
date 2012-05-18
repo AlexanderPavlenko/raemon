@@ -68,6 +68,8 @@ module Raemon
         kill_each_worker(:KILL)
       end
 
+      Configuration.on_stop.call
+
       instrument 'master.stop', :pid => master_pid
     end
 
