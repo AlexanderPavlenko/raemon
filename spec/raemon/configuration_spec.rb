@@ -43,6 +43,8 @@ describe Raemon::Configuration do
 
   its(:instrumentor_name) { should eq(described_class::DEFAULT_INSTRUMENTOR_NAME) }
 
+  its(:on_stop) { should be_a(Proc) }
+
   describe '.logger=' do
     let(:fake_logger) { double }
 
