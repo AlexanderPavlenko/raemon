@@ -62,6 +62,8 @@ module Raemon
 
     option :instrumentor_name, :default => DEFAULT_INSTRUMENTOR_NAME
 
+    option :on_stop, :default => Proc.new {}
+
     # @param [Logger] logger Some logger to use with this library
     def logger=(logger)
       @logger = logger
